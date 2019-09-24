@@ -11,7 +11,7 @@ If we want to/can decide on patterns, I can have another input that will pick wh
 cd to current directory
 sqlite3 LEDstate.db
 begin;
-create table LEDstate (Cminute numeric, duration numeric, name text);
+create table LEDstate (Cminute numeric, duration numeric);
 insert into LEDstate values (datetime(CURRENT_TIMESTAMP),15," ");
 commit;
 .exit
