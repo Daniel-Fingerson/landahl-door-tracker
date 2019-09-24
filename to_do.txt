@@ -1,0 +1,21 @@
+write it so that it will write to an SQL file with two inputs:
+
+How long to keep the LED running, the other with the time it was inputed
+
+Have the webpage not intitally output 1 0r 0
+
+Rather, have it ouput the state of whatever the file says/ dont if theres enough of a gap in time
+
+If we want to/can decide on patterns, I can have another input that will pick what sort of pattern to blink
+
+cd to current directory
+sqlite3 LEDstate.db
+begin;
+create table LEDstate (Cminute numeric, duration numeric, name text);
+insert into LEDstate values (datetime(CURRENT_TIMESTAMP),15," ");
+commit;
+.exit
+
+have a post that reads back to the user the input page
+
+have it send a text to landahl
